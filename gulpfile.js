@@ -67,6 +67,13 @@ gulp.task('img', () => {
     .pipe(gulp.dest('dist/img'));
 });
 
+gulp.task('jquery', () => {
+  return gulp
+  .src('src/**/*.js')
+  .pipe(gulp.dest('dist/'))
+  .pipe(sync.stream());
+})
+
 gulp.task('reload', () => {
   sync({
     server: {
@@ -76,7 +83,9 @@ gulp.task('reload', () => {
   });
 });
 
-gulp.task('watch', ['img', 'css', 'html', 'reload'], () => {
+gulp.task('watch', ['img', 'css', 'html', 'img', 'jquery', 'reload'], () => {
   watch('src/**/*.scss', () => gulp.start('css'));
   watch('src/**/*.html', () => gulp.start('html'));
+  watch('src/assets/img/**/*.*', () => gulp.start('img'));
+  watch('src/**/*.js', () => gulp.start('jquery'));
 });
