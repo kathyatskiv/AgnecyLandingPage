@@ -1,0 +1,43 @@
+.footer{
+    background: $secondary;
+    color: $secondary-text;
+    height: 100px;
+
+    .container{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.footer__socials-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__socials-item{
+    display: inline-block;
+
+    &:not(:last-child){
+        margin-right: 20px;
+    }
+}
+
+.footer__socials-link{
+    text-decoration: none;
+    color: $secondary-text;
+
+    &:hover{
+        color: $accent;
+    }
+
+    &:active{
+        opacity: .8;
+    }
+}
+
+.footer__socials-icon{
+    @include font-size(20);
+}

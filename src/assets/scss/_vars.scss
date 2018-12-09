@@ -1,10 +1,13 @@
-$base-font: sans-serif;
+$base-font: 'Open Sans', sans-serif;
+$headline-size: 46;
 
-$primary: #000;
-$secondary: #020202;
+$primary: #fff;
+$secondary: rgb(49, 48, 48);
+$accent: #ff2d2d;
+$accent-hover: #bb2828;
 
-$primary-text: #fff;
-$secondary-text: #f2f2f2;
+$primary-text: #000;
+$secondary-text: #fff;
 
 $success: green;
 $warning: yellow;
