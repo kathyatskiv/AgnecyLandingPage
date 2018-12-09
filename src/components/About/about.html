@@ -1,0 +1,48 @@
+{%
+    set skills = [
+    {
+        icon: 'chat_bubble_outline',
+        title: 'Managment',
+        descr: 'Lorem ipsum dolor sitea amet, zixf conseit  adipi cing elit, seddi do eiusmod btdempor in didunt utlae ore etioe.Lorem ipsum new idolor'
+    },
+    {
+        icon: 'color_lens',
+        title: 'UX / UI Design',
+        descr: 'Lorem ipsum dolor sitea amet, zixf conseit  adipi cing elit, seddi do eiusmod btdempor in didunt utlae ore etioe.Lorem ipsum new idolor'
+    },
+    {
+        icon: 'loyalty',
+        title: 'Logo / Branding',
+        descr: 'Lorem ipsum dolor sitea amet, zixf conseit  adipi cing elit, seddi do eiusmod btdempor in didunt utlae ore etioe.Lorem ipsum new idolor'
+    },
+    {
+        icon: 'photo_filter',
+        title: 'Animation',
+        descr: 'Lorem ipsum dolor sitea amet, zixf conseit  adipi cing elit, seddi do eiusmod btdempor in didunt utlae ore etioe.Lorem ipsum new idolor'
+    }
+    ]
+%}
+
+<section class="about" id="about">
+    <div class="container">
+        <div class="description">
+            <h2 class="description__title">do you know we can provide for you ?</h2>
+            <p class="description__description">
+                Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et.Lorem ni ipsum dolor sit amet, consectetur adipis cing elit, ed doi eiusmod tempor incididunt ut labore et.
+            </p>
+            <button class="description__btn btn">Learn more</button>
+        </div>
+        <div class="skills">
+            {% for skill in skills %}
+            <div class="skill">
+                <i class="skill__icon material-icons">
+                    {{ skill.icon }}
+                </i>
+                <h3 class="skill__title">{{ skill.title }}</h3>
+                <p class="skill__description">{{ skill.descr }}</p>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</section>

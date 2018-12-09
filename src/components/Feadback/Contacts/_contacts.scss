@@ -1,0 +1,43 @@
+.contacts{
+    max-width: 30%;
+    //background: $secondary;
+    color: $secondary-text;
+    padding: 90px 0 90px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: -1;
+
+    &:before{
+        content: '';
+        width: 200%;
+        height: 100%;
+        position: absolute;
+        background: $secondary;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+}
+
+.contacts__title{
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    line-height: 34px;
+    font-weight: 700;
+
+    @include font-size(18);
+}
+
+.contacts__paragraph{
+    line-height: 28px;
+    margin: 0;
+}
+
+.contacts__link{
+    text-decoration: none;
+    cursor: pointer;
+    color: $secondary-text;
+}

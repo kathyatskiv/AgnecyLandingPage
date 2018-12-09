@@ -1,0 +1,46 @@
+.feadback{
+    display: flex;
+    justify-content: space-between;
+    .container{
+        height: 100%;
+        padding: 110px 0;
+    }
+}
+
+.feadback__title{
+    text-transform: uppercase;
+    color: $primary-text;
+    max-width: 720px;
+    margin-top: 0;
+    margin-bottom: 55px;
+    letter-spacing: 0px;
+    font-weight: 700;
+
+    @include font-size($headline-size);
+}
+
+.feadback__sub-title{
+    max-width: 720px;
+    margin-top: 0;
+    margin-bottom: 130px;
+    position: relative;
+    line-height: 28px;
+    z-index: -1;
+
+    &:after{
+        content: '';
+        z-index: -2;
+        position: absolute;
+        height: 2px;
+        width: 125px;
+        background: $accent;
+        left: 0;
+        bottom: -90px;
+    }
+}
+
+.feadback__content{
+    display: flex;
+    justify-content: space-between;
+}
+

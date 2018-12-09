@@ -1,0 +1,130 @@
+.team{
+    .container{
+        padding: 30px 0 100px 0;
+    }
+}
+
+.team__title{
+    letter-spacing: 0px;
+    color: $primary-text;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    @include font-size($headline-size);
+}
+
+.team__sub-title{
+    max-width: 410px;
+    line-height: 28px;
+    color: $primary-text;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: -2;
+
+    &:after{
+        content: '';
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        background: $accent;
+        bottom: -30px;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.team__content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.team__current-member-image--wrapper{
+    width: 320px;
+    height: 450px;
+    background: #f5f0dd;
+    margin-right: 70px;
+}
+
+.team__member-decription{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.team__member-name{
+    letter-spacing: 0px;
+    color: $primary-text;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+
+    @include font-size(30);
+}
+
+.team__member-info{
+    max-width: 630px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.team__member-socials{
+    margin-bottom: 30px;
+}
+
+.team__member-link{
+    text-decoration: none;
+    font-style: italic;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color: $primary-text;
+    cursor: pointer;
+    
+    &:not(:last-child){
+        margin-right: 30px;
+    }
+
+    &:hover{
+        color: $accent;
+    }
+
+    &:active{
+        opacity: .6;
+    }
+}
+
+.team__members-galery{
+    display: flex;
+    justify-content: space-between;
+}
+
+.team__member-image-wrapper{
+    width: 23%;
+    height: 180px;
+    background-image: url('https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&h=350'); 
+    background-color: #f5f0dd;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:after{
+        content: 'SOKINA JUE';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        background: rgba($color: #000, $alpha: .6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $secondary-text;
+        transform: translateY(100%);
+        transition: transform .1s linear;
+    }
+
+    &:hover:after{
+        transform: translateY(0%);
+    }
+}
